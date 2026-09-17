@@ -1,0 +1,10 @@
+torch==2.6.0
+numpy>=1.26
+opencv-python==4.11.0.86
+PyYAML==6.0.2
+scipy==1.15.2
+scikit-sparse==0.4.16
+Cython==3.0.12
+Pillow==11.2.1
+matplotlib==3.10.1
+viser==1.0.16

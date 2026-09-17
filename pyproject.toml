@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anchor3r"
+version = "0.1.0"
+description = "Streaming 3D reconstruction with transient anchors for long-horizon visual mapping"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+authors = [
+  { name = "Peilin Tao" },
+  { name = "Chong Cheng" },
+  { name = "Yuansen Du" },
+  { name = "Caiwei Song" },
+  { name = "Zhengqing Chen" },
+  { name = "Xiaoyang Guo" },
+  { name = "Wei Yin" },
+  { name = "Weiqiang Ren" },
+  { name = "Qian Zhang" },
+  { name = "Hainan Cui" },
+  { name = "Shuhan Shen" },
+]
+keywords = ["3D reconstruction", "visual odometry", "SLAM", "streaming inference"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "torch>=2.1",
+  "numpy>=1.26",
+  "opencv-python>=4.8",
+  "PyYAML>=6",
+  "scipy>=1.10",
+  "scikit-sparse>=0.4.12",
+  "Pillow>=9",
+  "matplotlib>=3.7",
+  "viser>=1.0",
+]
+
+[project.urls]
+Paper = "https://arxiv.org/abs/2606.05035"
+Repository = "https://github.com/polar-explorer/Anchor3R"
+Weights = "https://huggingface.co/polar-explorer/Anchor3R"
+
+[project.optional-dependencies]
+hub = ["huggingface_hub>=0.27"]
+
+[project.scripts]
+anchor3r-infer = "infer:main"
+anchor3r-viser = "demo_viser:main"
+
+[tool.setuptools]
+py-modules = ["infer", "demo_viser"]
+license-files = ["LICENSE", "NOTICE"]
+
+[tool.setuptools.packages.find]
+include = ["anchor3r*"]
+
+[tool.setuptools.package-data]
+"anchor3r.configs" = ["*.yaml"]

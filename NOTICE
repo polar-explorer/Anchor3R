@@ -1,0 +1,39 @@
+Anchor3R contains an inference implementation and model components derived from
+or inspired by the following projects:
+
+Original Anchor3R code is licensed under the Apache License, Version 2.0,
+provided in LICENSE. Files and components identified below remain subject to
+their respective upstream terms.
+
+Copyright 2026 Peilin Tao
+
+- VGGT: https://github.com/facebookresearch/vggt
+- DINO and DINOv2: https://github.com/facebookresearch/dino and
+  https://github.com/facebookresearch/dinov2
+- timm: https://github.com/huggingface/pytorch-image-models
+- RoPE-ViT: https://github.com/naver-ai/rope-vit
+- Depth Anything V2: https://github.com/DepthAnything/Depth-Anything-V2
+- SALAD: https://github.com/serizba/salad
+- OpenGlue: https://github.com/ucuapps/OpenGlue (optimal transport via SALAD)
+
+Existing upstream copyright and attribution headers are retained. The
+corresponding license texts and a file-level provenance inventory are included
+in labeled sections of LICENSE. Items marked for review are not an authorization
+to redistribute, and a license text alone does not settle derivation questions.
+
+The included SALAD integration and VGGT-derived components retain their
+separate upstream terms. The original-code Apache-2.0 terms do not relicense them.
+The main Anchor3R checkpoint's selected license is documented in its separate
+Hugging Face model card:
+https://huggingface.co/polar-explorer/Anchor3R
+Optional SALAD and DINOv2 weights are distributed separately by their upstreams.
+
+The following notice is retained with the historical Code Llama reference
+identified in the RoPE-ViT provenance review; its inclusion does not settle the
+unresolved origin or license applicability of Anchor3R's RoPE implementation:
+
+Llama 2 is licensed under the LLAMA 2 Community License,
+Copyright (c) Meta Platforms, Inc. All Rights Reserved.
+
+The complete RoPE-ViT upstream NOTICE, including its copyright attributions and
+license exceptions, is preserved verbatim in LICENSE, section RoPE-ViT-NOTICE.txt.

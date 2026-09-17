@@ -1,0 +1,19 @@
+include README.md LICENSE NOTICE CITATION.cff CONTRIBUTING.md SECURITY.md
+include requirements.txt infer.yaml
+include demo_viser.py
+include checkpoints/release.json
+include docs/INSTALLATION.md docs/REPRODUCIBILITY.md
+include scripts/__init__.py scripts/download_weights.py
+include scripts/evaluate_trajectory.py scripts/kitti_to_evc.py
+include scripts/run_evc_dataset.sh scripts/validate_evc_dataset.py scripts/visualize_results.py
+recursive-include tools *.py
+prune tests
+prune test
+prune docs/assets
+exclude docs/*.html docs/*.css docs/*.js docs/.nojekyll
+prune .release-private
+prune .agents
+prune .codex
+prune hf-release
+prune outputs_anchor3r
+global-exclude *.py[cod] *.pt *.pth *.ckpt *.safetensors *.onnx *.download *.partial

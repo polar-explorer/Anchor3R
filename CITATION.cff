@@ -1,0 +1,58 @@
+cff-version: 1.2.0
+message: "If you use Anchor3R, please cite our paper."
+title: "Anchor3R: Streaming 3D Reconstruction with Transient Anchors for Long-Horizon Visual Mapping"
+type: software
+version: 0.1.0
+url: "https://github.com/polar-explorer/Anchor3R"
+repository-code: "https://github.com/polar-explorer/Anchor3R"
+authors:
+  - family-names: Tao
+    given-names: Peilin
+  - family-names: Cheng
+    given-names: Chong
+  - family-names: Du
+    given-names: Yuansen
+  - family-names: Song
+    given-names: Caiwei
+  - family-names: Chen
+    given-names: Zhengqing
+  - family-names: Guo
+    given-names: Xiaoyang
+  - family-names: Yin
+    given-names: Wei
+  - family-names: Ren
+    given-names: Weiqiang
+  - family-names: Zhang
+    given-names: Qian
+  - family-names: Cui
+    given-names: Hainan
+  - family-names: Shen
+    given-names: Shuhan
+preferred-citation:
+  type: article
+  title: "Anchor3R: Streaming 3D Reconstruction with Transient Anchors for Long-Horizon Visual Mapping"
+  year: 2026
+  url: "https://arxiv.org/abs/2606.05035"
+  authors:
+    - family-names: Tao
+      given-names: Peilin
+    - family-names: Cheng
+      given-names: Chong
+    - family-names: Du
+      given-names: Yuansen
+    - family-names: Song
+      given-names: Caiwei
+    - family-names: Chen
+      given-names: Zhengqing
+    - family-names: Guo
+      given-names: Xiaoyang
+    - family-names: Yin
+      given-names: Wei
+    - family-names: Ren
+      given-names: Weiqiang
+    - family-names: Zhang
+      given-names: Qian
+    - family-names: Cui
+      given-names: Hainan
+    - family-names: Shen
+      given-names: Shuhan

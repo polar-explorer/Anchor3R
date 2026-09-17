@@ -1,0 +1,31 @@
+# Python caches and local editable installs
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environments and package caches
+.venv/
+.conda/
+.cache/
+
+# Generated inference outputs
+outputs_anchor3r/
+video_cache/
+
+# Local datasets and converted evaluation data
+data/
+
+# Local-only model weights
+checkpoints/*.pt
+checkpoints/*.pth
+checkpoints/*.ckpt
+checkpoints/*.safetensors
+checkpoints/*.onnx
+checkpoints/**/*.pt
+checkpoints/**/*.pth
+checkpoints/**/*.ckpt
+checkpoints/**/*.safetensors
+checkpoints/**/*.onnx

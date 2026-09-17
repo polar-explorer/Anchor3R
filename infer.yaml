@@ -1,0 +1,76 @@
+device: cuda
+
+model:
+  checkpoint: checkpoints/Anchor3R.pt
+  strict_load: true
+
+  sampler_cfg:
+    stream_aggregator_cfg:
+      img_size: 518
+      patch_size: 14
+      embed_dim: 1024
+      intermediate_layer_idx: [4, 11, 17, 23]
+      num_heads: 16
+      depth: 24
+      num_pose_tokens: 16
+      pose_attn_depth: 4
+      pose_window_attn_layer_idx: [2, 5, 8, 11, 14, 17, 20, 23]
+      gate_attn: true
+
+    cam_decoder_cfg:
+      pose_encoding_type: absT_quaR
+
+    fov_head_cfg:
+      hidden_dims: [512, 128]
+      init_bias: 0.0
+
+    dpt_decoder_cfg:
+      output_dim: 2
+      use_conf: true
+      activation: exp
+      conf_activation: expp1
+
+data:
+  images: null
+  video: null
+  sequence_name: null
+  camera_preprocess: false
+  video_stride: 1
+  video_cache: video_cache
+  max_frames: null
+  image_num_workers: 4
+  prefetch_chunks: true
+  pin_memory: true
+
+inference:
+  mode: online
+  window_size: 10
+  chunk_size: 64
+  use_amp: true
+  amp_dtype: float16
+  offload_outputs_to_cpu: true
+
+loop:
+  enabled: false
+  salad_checkpoint: checkpoints/loop/dino_salad.ckpt
+  dino_checkpoint: checkpoints/loop/dinov2_vitb14_pretrain.pth
+  salad_backbone: dinov2_vitb14
+  salad_image_size: [336, 336]
+  salad_batch_size: 128
+  descriptor_num_workers: 8
+  keyframe_stride: 2
+  retrieval_top_k: 3
+  temporal_threshold: 30
+  salad_score_threshold: 0.85
+  insert_position: before
+  motion_edge_weight: 1.0
+  loop_edge_weight: 1.0
+  verbose: true
+
+output:
+  root: outputs_anchor3r
+  save_geometry: false
+  save_geometry_world_points: true
+  save_geometry_confidence: true
+  save_dpt_map: false
+  save_dpt_conf: false
